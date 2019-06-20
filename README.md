@@ -1,13 +1,34 @@
-#Docker Minecraft Server
+# Docker Minecraft Server
 Dockerfile to create a docker container with a running Minecraft Server 
 
 Require:
 ```
-Docker
+- Docker
+- Minecraft Server jar file
+```
+
+Server jar can be download from:
+```
+https://www.minecraft.net/en-us/download/server/
+```
+
+# Running the Dockerfile
+
+
+Command to build to docker container:
+```
+docker build . -t <CONTAINER_NAME>
+```
+Command to run the Container: 
+```
+docker run -d -p <HOST_PORT>:25565 <CONTAINER_NAME>
 ```
 
 # build-run.sh
-Script to download, build and run Dockerfile with Minecraft Server
+Script to download, build and run Dockerfile with Minecraft Server:
+```
+./build-run.sh
+```
 
 In case the script is not working use the below command:
 ```
@@ -21,7 +42,7 @@ Default container host port = `25565`
 
 To change the default values run the script with additional parameters:
 ```
-./build-run.sh <own_name> <own_port>
+./build-run.sh <OWN_CONTAINER_NAME> <OWN_HOST_PORT>
 ```
 
 # server.properties
