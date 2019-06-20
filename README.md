@@ -6,15 +6,10 @@ Require:
 - Docker
 - Minecraft Server jar file
 ```
-
 Server jar can be download from:
-```
 https://www.minecraft.net/en-us/download/server/
-```
 
 # Running the Dockerfile
-
-
 Command to build to docker container:
 ```
 docker build . -t <CONTAINER_NAME>
