@@ -1,0 +1,23 @@
+variables:
+  DOCKER_NAME: "mc_server"
+  HOST_PORT: 25565
+
+stages:
+  - build
+  - run
+
+image: docker:latest
+
+services:
+  - docker:dind
+
+build:
+  stage: build
+  script:
+    - docker build . -t $DOCKER_NAME:latest
+    - docker save $DOCKER_NAME > ~/$DOCKER_NAME.tar
+
+run:
+  stage: run
+  script:
+    - docker run -d -p $HOST_PORT:25565 $DOCKER_NAME
