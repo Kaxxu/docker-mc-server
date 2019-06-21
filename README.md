@@ -5,6 +5,7 @@ Require:
 ```
 - Docker
 - Minecraft Server jar file
+- jq
 ```
 Server jar can be download from:
 https://www.minecraft.net/en-us/download/server/

@@ -2,10 +2,13 @@
 
 NAME=${1:-mc_server}
 PORT=${2:-25565}
+API=https://launchermeta.mojang.com/mc/game/version_manifest.json
 
-#TBD - download newest server.jar
+VER_API=$(curl $API | jq .versions[0].url | sed 's/"//g')
+SERVER=$(curl $VER_API | jq .downloads.server.url | sed 's/"//g')
+
 echo -e "\e[32mGet server.jar\e[0m"
-wget https://launcher.mojang.com/v1/objects/808be3869e2ca6b62378f9f4b33c946621620019/server.jar
+wget $SERVER
 echo ""
 
 echo -e "\e[32mDocker Build\e[0m"
