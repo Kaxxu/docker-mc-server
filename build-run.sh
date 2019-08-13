@@ -18,4 +18,3 @@ echo ""
 echo -e "\e[32mDocker Run\e[0m"
 docker run -d -p $2:25565 $NAME
 echo ""
-
