@@ -1,5 +1,5 @@
 # Docker Minecraft Server
-Dockerfile to create a docker container with a running Minecraft Server 
+Dockerfile to create a Minecraft Server in a container
 
 Require:
 ```

@@ -12,9 +12,9 @@ wget $SERVER
 echo ""
 
 echo -e "\e[32mDocker Build\e[0m"
-docker build . -t $NAME
+docker build -t $NAME .
 echo ""
 
 echo -e "\e[32mDocker Run\e[0m"
-docker run -d -p $2:25565 $NAME
+docker run -d -p $PORT:25565 $NAME
 echo ""
