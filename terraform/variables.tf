@@ -1,3 +1,4 @@
-variable "TFC-organization" {
-  description = "Name of Terraform Cloud organization"
+variable "name" {
+  description = "Name"
+  default     = "minecraft"
 }

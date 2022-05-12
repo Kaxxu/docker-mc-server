@@ -3,7 +3,7 @@ terraform {
 
   backend "remote" {
     hostname     = "app.terraform.io"
-    organization = var.TFC-organization
+    organization = "Yutani"
 
     workspaces {
       name = "docker-mc-server"
