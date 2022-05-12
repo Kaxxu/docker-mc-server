@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-push:
-  run-on: ubuntu-latest
+  runs-on: ubuntu-latest
   steps:
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
