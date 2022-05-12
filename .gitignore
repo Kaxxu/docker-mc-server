@@ -1,3 +1,4 @@
 *.swp
 *.jar
-server.jar
+*.lock.hcl
+.terraform
