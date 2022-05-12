@@ -1,0 +1,4 @@
+terraform/*
+*.yml
+*.sh
+Jenskinsfile
