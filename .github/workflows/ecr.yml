@@ -12,6 +12,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Fetch server
+        run: |
+          API='https://launchermeta.mojang.com/mc/game/version_manifest.json'
+          VER_API=$(curl ${API} | jq .versions[0].url | sed 's/"//g')
+          SERVER=$(curl ${VER_API} | jq .downloads.server.url | sed 's/"//g')
+          wget ${SERVER}
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
