@@ -5,6 +5,9 @@ WORKDIR /opt/minecraft
 COPY server.jar .
 COPY server.properties .
 
+RUN microdnf makecache
+RUN microdnf upgrade && microdnf clean
+
 RUN echo "eula=true" > eula.txt
 
 EXPOSE 25565
