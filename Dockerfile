@@ -6,7 +6,7 @@ COPY server.jar .
 COPY server.properties .
 
 RUN microdnf makecache
-RUN microdnf upgrade && microdnf clean
+RUN microdnf upgrade && microdnf clean all
 
 RUN echo "eula=true" > eula.txt
 
